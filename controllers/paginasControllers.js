@@ -26,9 +26,22 @@ const paginaTestimonios = (req,res)=>{
     })
 };
 
+
+const paginaDetallesViaje = async (req,res)=>{
+    const {slug} = req.params;
+    try{
+        const resultado = await Viaje.findOne({where : {slug}});
+        res.render('viaje',{
+            pagina: 'Información Viaje',
+            resultado
+        })
+    }
+    catch(err){console.log(err)}
+};
 export {
     paginaInicio,
     paginaNosotros,
     paginaViajes,
-    paginaTestimonios
+    paginaTestimonios,
+    paginaDetallesViaje
 }
