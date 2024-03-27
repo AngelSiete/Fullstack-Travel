@@ -12,3 +12,23 @@ block contenido
             .col-md-6
                 img(src="img/inicio_nosotros.jpg" class="img-fluid")
         include ./layout/viajes
+    .descuento 
+        .container 
+            .row 
+                .col-md-6 
+                    .contenido 
+                        h3 5% de descuento 
+                        p.titulo viaje a Canadá
+                        p.precio 2500 USD
+    .container 
+        h2.mt-5.text-center Testimonios
+        .row.testimoniales
+            each testimonio in testimonios
+                .col-md-6.col-lg-4.mb-4 
+                    .card 
+                        .card-body 
+                            blockquote.blockquote
+                            p.mb-0 
+                                | #{testimonio.mensaje}
+                            footer.blockquote-footer 
+                                | #{testimonio.nombre}
