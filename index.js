@@ -22,7 +22,9 @@ app.use((req,res, next) => {
     res.locals.nombrePagina = 'Agencia de Viajes';
     next();
 })
-
+// body parser
+app.use(express.urlencoded({extended:true}))
+// 
 app.use(express.static('public'));
 
 app.use('/', router);
