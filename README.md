@@ -1,2 +1,4 @@
 # Fullstack-Travel
- https://fullstack-travel.onrender.com/
+Just a small site made to learn pug and sequelize
+--- 
+https://fullstack-travel.onrender.com/
